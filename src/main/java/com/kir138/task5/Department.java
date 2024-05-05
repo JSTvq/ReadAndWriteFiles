@@ -1,6 +1,8 @@
 package com.kir138.task5;
 
-public class Department {
+import java.io.Serializable;
+
+public class Department implements Serializable {
     /**
      * Задача 5
      * Создать класс Employee с полями
@@ -14,4 +16,20 @@ public class Department {
      */
     private String name;
     private int amountOfWorkers;
+
+    public Department() {
+    }
+
+    public Department(String name, int amountOfWorkers) {
+        this.name = name;
+        this.amountOfWorkers = amountOfWorkers;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "name='" + name + '\'' +
+                ", amountOfWorkers=" + amountOfWorkers +
+                '}';
+    }
 }
